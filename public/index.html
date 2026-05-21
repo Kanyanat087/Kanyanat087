@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daily Notes</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero" aria-labelledby="app-title">
+        <p class="eyebrow">Node.js + LocalStorage</p>
+        <h1 id="app-title">Daily Notes</h1>
+        <p class="hero-copy">Save quick thoughts, reminders, and ideas directly in this browser.</p>
+      </section>
+
+      <div class="workspace">
+        <section class="editor" aria-labelledby="editor-title">
+          <div class="section-heading">
+            <span class="section-icon" aria-hidden="true">+</span>
+            <h2 id="editor-title">New note</h2>
+          </div>
+        <form id="note-form" class="note-form">
+          <label for="note-input">What do you want to remember?</label>
+          <textarea id="note-input" name="note" rows="5" placeholder="Type a note, task, or idea..."></textarea>
+          <div class="actions">
+            <button type="submit">Save note</button>
+            <button type="button" id="clear-button" class="secondary">Clear all</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="notes-panel" aria-labelledby="notes-title">
+          <div class="section-heading panel-heading">
+            <span class="section-icon saved" aria-hidden="true">✓</span>
+            <div>
+              <h2 id="notes-title">Saved notes</h2>
+              <p id="note-count" class="note-count">0 notes</p>
+            </div>
+          </div>
+        <ul id="notes-list" class="notes-list"></ul>
+        <p id="empty-state" class="empty-state">No notes yet. Add your first one on the left.</p>
+      </section>
+      </div>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
